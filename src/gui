@@ -1,0 +1,48 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.KeyEvent;
+
+public class DisplayFrame extends JFrame {
+    private JButton run;
+    private JButton stop;
+    private JButton button;
+
+    public DisplayFrame(String title) throws HeadlessException
+    {
+        this.setTitle( title );
+        initiateFrame();
+        initiateComponents();
+
+        addComponents();
+
+        setLayout();
+
+        addActionListeners();
+
+
+        public static void main(String[] args)
+        {
+            DisplayFrame displayFrame = new DisplayFrame("Rundkjøring Simulator");
+
+        }
+
+        private void initiateFrame()
+        {
+            this.setSize(1366 , 768 );
+            this.setMinimumSize( new Dimension( 1366, 768 ) );
+
+            this.setBackground( new Color( 116, 228, 74) );
+
+
+
+            if(this != null)
+            {
+                this.setResizable( true );
+            }
+            setDefaultCloseOperation( WindowConstants.EXIT_ON_CLOSE );
+            setLocationRelativeTo( null );
+
+        }
+
+    }
+}
